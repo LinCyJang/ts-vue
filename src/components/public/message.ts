@@ -11,7 +11,7 @@ export class MessageBox {
     if (typeof options === 'string') {
       options = {
         message: options,
-        typeClass: typeClass,
+        classType: typeClass,
         position: position
       }
     }
@@ -20,11 +20,9 @@ export class MessageBox {
     })
     this.instance.vm = this.instance.$mount()
     document.body.appendChild(this.instance.vm.$el)
-    this.instance.vm.classType = typeClass
     this.instance.vm.visible = true
     this.instance.dom = this.instance.vm.$el
     this.instance.dom.style.zIndex = 10000
-    console.log(this.instance.vm)
   }
 }
 

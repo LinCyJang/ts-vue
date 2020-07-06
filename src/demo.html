@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            background-color: #ffffff
+        }
+        
+        .water {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            background-color: rgb(30, 118, 235);
+            border-radius: 50%;
+            margin: 200px auto 0;
+            overflow: hidden;
+        }
+        
+        .water:before,
+        .water:after {
+            content: "";
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            top: 0;
+            left: 50%;
+            background-color: rgba(255, 255, 255, 0.4);
+            border-radius: 45%;
+            transform: translate(-50%, -70%) rotate(0);
+            animation: rotate 6s linear infinite;
+            z-index: 10;
+        }
+        
+        .water:after {
+            border-radius: 47%;
+            background-color: rgba(255, 255, 255, 1);
+            transform: translate(-50%, -70%) rotate(0);
+            animation: rotate 10s linear -5s infinite;
+            z-index: 20;
+        }
+        
+        @keyframes rotate {
+            50% {
+                transform: translate(-50%, -70%) rotate(180deg);
+            }
+            100% {
+                transform: translate(-50%, -70%) rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="water"></div>
+</body>
+
+</html>

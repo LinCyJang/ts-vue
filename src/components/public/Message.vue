@@ -68,7 +68,6 @@ export default class Message extends Vue {
 
   mounted () {
     this.startTimer()
-    console.log(this.classType, this.position)
   }
 
   // method
