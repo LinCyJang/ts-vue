@@ -31,6 +31,16 @@ const routes: Array<RouteConfig> = [
     path: '/example/particles',
     name: 'particles',
     component: () => import(/* webpackChunkName: "about" */ '@/example/particles.vue')
+  },
+  {
+    path: '/login',
+    name: 'login',
+    component: () => import('@/views/user/login.vue')
+  },
+  {
+    path: '/ejct',
+    name: 'ejct',
+    component: () => import('@/components/public/ejct.vue')
   }
 ]
 
